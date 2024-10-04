@@ -1,1 +1,1 @@
-# AFNet
+# AFQ-Net

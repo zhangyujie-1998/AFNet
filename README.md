@@ -1,1 +1,9 @@
-# AFQ-Net
+# [Perception-Guided Quality Metric of 3D Point Clouds Using Hybrid Strategy (TCSVT2024)](https://arxiv.org/abs/2407.09806]
+by Yujie Zhang, Qi Yang,  Yiling Xu, Shan Liu
+
+This respository is about a full-reference point cloud quality metric based on a hybrid strategy. The key idea is that **the human visual system (HVS) dynamically tackles visual information according to different distortion levels (i.e., distortion detection for high-quality samples and appearance perception for low-quality samples)**.
+
+## Introduction
+![image text](https://github.com/zhangyujie-1998/PHM/blob/main/fig/framwork.png)
+
+Full-reference point cloud quality assessment (FR-PCQA) aims to infer the quality of distorted point clouds with available references. Most of the existing FR-PCQA metrics ignore the fact that the human visual system (HVS) dynamically tackles visual information according to different distortion levels (i.e., distortion detection for high-quality samples and appearance perception for low-quality samples) and measure point cloud quality using unified features.  To bridge the gap, in this paper, we propose a perception-guided hybrid metric (PHM) that adaptively leverages two visual strategies with respect to distortion degree to predict point cloud quality: to measure visible difference in high-quality samples, PHM takes into account the masking effect and employs texture complexity as an effective compensatory factor for absolute difference; on the other hand, PHM leverages spectral graph theory to evaluate appearance degradation in low-quality samples. Variations in geometric signals on graphs and changes in the spectral graph wavelet coefficients are utilized to characterize geometry and texture appearance degradation, respectively. Finally, the results obtained from the two components are combined in a non-linear method to produce an overall quality score of the tested point cloud. The results of the experiment on five independent databases show that PHM achieves state-of-the-art (SOTA) performance and offers significant performance improvement in multiple distortion environments.

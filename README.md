@@ -3,7 +3,9 @@ by Yujie Zhang, Qi Yang, Ziyu Shan, Yiling Xu
 
 This respository is about a no-reference point cloud quality metric based on asynchronous learning. The key idea is **using global feature to directly guide the "generation" of local feature**.
 
-<img src="https://github.com/zhangyujie-1998/AFQ-Net/blob/main/fig/motivation.png" width='50%' height='70%'>
+<p align="center">
+<img src="https://github.com/zhangyujie-1998/AFQ-Net/blob/main/fig/motivation.png" width='70%' height='70%'>
+</p>
 
 ## Introduction
 

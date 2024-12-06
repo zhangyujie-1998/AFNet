@@ -109,34 +109,3 @@ class HyperNet(nn.Module):
         
         return score_fine, loss_dis
     
-
-
-
- 
-    
-if __name__ == "__main__":
-    import os 
-    os.environ['CUDA_VISIBLE_DEVICES'] = '6'    
-    
-    # 定义模型
-    model = AFQNet().cuda()
-    
-    # 打印基准内存分配
-    print(f"Baseline Memory Allocated: {torch.cuda.memory_allocated() / 1e6} MB")
-
-    # 创建输入数据
-    dummy_input = torch.randn(1, 6, 4, 224, 224).cuda()  # Assuming input size is 224x224 RGB image
-    mask = torch.randint(0, 2, (1, 6, 1, 224, 224)).cuda()
-    input = torch.cat([dummy_input, mask], dim=2)
-
-    # 打印前向传递前的内存分配
-    print(f"Memory Allocated before Forward Pass: {torch.cuda.memory_allocated() / 1e6} MB")
-    
-    # 前向传递
-    out = model(input)
- 
-    
-    # 打印前向传递后的内存分配
-    print(f"Memory Allocated after Forward Pass: {torch.cuda.memory_allocated() / 1e6} MB")
-    print(f"Max Memory Allocated: {torch.cuda.max_memory_allocated() / 1e6} MB")
-    

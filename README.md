@@ -2,7 +2,7 @@
 by Yujie Zhang, Qi Yang, Ziyu Shan, Yiling Xu
 
 This respository is about a no-reference point cloud quality metric based on asynchronous learning. The key idea is **using global feature to directly guide the "generation" of local feature**.
-
+![image text](https://github.com/zhangyujie-1998/AFQ-Net/blob/main/fig/motivation.png)
 ## Introduction
 
 Recent years have witnessed the success of the deep learning-based technique in research of no-reference point cloud quality assessment (NR-PCQA). For a more accurate quality prediction, many previous studies have attempted to capture global and local features in a bottom-up manner, but ignored the interaction and promotion between them. To solve this problem, we propose a novel asynchronous feedback quality prediction network (AFQ-Net). Motivated by human visual perception mechanisms, AFQ-Net employs a dual-branch structure to deal with global and local features, simulating the left and right hemispheres of the human brain, and constructs a feedback module between them. Specifically, the input point clouds are first fed into a transformer-based global encoder to generate the attention maps that highlight these semantically rich regions, followed by being merged into the global feature. Then, we utilize the generated attention maps to perform dynamic convolution for different semantic regions and obtain the local feature. Finally, a coarse-to-fine strategy is adopted to merge the two features into the final quality score. We conduct comprehensive experiments on three datasets and achieve superior performance over the state-of-the-art approaches on all of these datasets. 

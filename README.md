@@ -12,6 +12,7 @@ This respository is about a no-reference point cloud quality metric based on asy
 Recent years have witnessed the success of the deep learning-based technique in research of no-reference point cloud quality assessment (NR-PCQA). For a more accurate quality prediction, many previous studies have attempted to capture global and local features in a bottom-up manner, but ignored the interaction and promotion between them. To solve this problem, we propose a novel asynchronous feedback quality prediction network (AFQ-Net). Motivated by human visual perception mechanisms, AFQ-Net employs a dual-branch structure to deal with global and local features, simulating the left and right hemispheres of the human brain, and constructs a feedback module between them. Specifically, the input point clouds are first fed into a transformer-based global encoder to generate the attention maps that highlight these semantically rich regions, followed by being merged into the global feature. Then, we utilize the generated attention maps to perform dynamic convolution for different semantic regions and obtain the local feature. Finally, a coarse-to-fine strategy is adopted to merge the two features into the final quality score. We conduct comprehensive experiments on three datasets and achieve superior performance over the state-of-the-art approaches on all of these datasets. 
 
 ## Dependencies
+
 * Python 3.7.16
 * PyTorch 1.8.0
 * TorchVision
@@ -71,7 +72,7 @@ You only need to replace the path of 'data_dir_texture', 'data_dir_depth' and 'd
 
 
 ## Citation
-## Citation
+
 If you find this work is helpful, please consider citing:
 ```
 @article{zhang2024asynchronous,

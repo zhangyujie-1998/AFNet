@@ -123,33 +123,3 @@ class DRConv2d(nn.Module):
         output = self.asign_index(output, guide_feature)
         return output, guide_mask
 
-if __name__ == '__main__':
-    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-    B = 2
-    in_channels = 4
-    out_channels = 16
-    size = 448
-    conv = DRConv2d(in_channels, out_channels, kernel_size=3, region_num=4, head_num=768).cuda()
-    conv.eval()
-    input = torch.ones(B, 4, 448, 672).cuda()
-    f_g = torch.ones(B,768,56, 84).cuda()
-    
-    output, guide_feature = conv(input, f_g)
-    print(input.shape, output.shape)
-
-    # flops, params
-    from thop import profile
-    from thop import clever_format
-    
-    class Conv2d(nn.Module):
-        def __init__(self):
-            super(Conv2d, self).__init__()
-            self.conv = nn.Conv2d(4, out_channels, kernel_size=3)
-        def forward(self, input):
-            return self.conv(input)
-    conv2 = Conv2d().cuda()
-    conv2.train()
-    macs2, params2 = profile(conv2, inputs=(input, ))
-    macs, params = profile(conv, inputs=(input, f_g))
-    print(macs2, params2)
-    print(macs, params)

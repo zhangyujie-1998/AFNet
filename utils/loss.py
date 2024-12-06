@@ -34,14 +34,3 @@ class CTFLoss(torch.nn.Module):
         return loss_total
     
     
-if __name__ == "__main__":
-    
-    mos = torch.randn(8,1).cuda()
-    pre1 = torch.randn(8,1).cuda()
-    pre2 = torch.randn(8,1).cuda()
-
-    loss_function = CTFLoss().cuda()
-    
-    loss = loss_function(pre1, pre2, mos)
-    print(loss)
-

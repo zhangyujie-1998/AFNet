@@ -1,4 +1,4 @@
-# [Asynchronous Feedback Network for Perceptual Point Cloud Quality Assessment (TCSVT2024)](https://arxiv.org/abs/2407.09806)
+# [Asynchronous Feedback Network for Perceptual Point Cloud Quality Assessment (TCSVT2024)](https://arxiv.org/abs/2407.09806) 
 by Yujie Zhang, Qi Yang, Ziyu Shan, Yiling Xu
 
 This respository is about a no-reference point cloud quality metric based on asynchronous learning. The key idea is **using global feature to directly guide the "generation" of local feature**.
@@ -13,4 +13,4 @@ Recent years have witnessed the success of the deep learning-based technique in 
 * TorchVision
 * scipy
 
-## 
+## Get Projection

@@ -9,11 +9,6 @@ from pytorch3d.structures import Pointclouds
 from pytorch3d.renderer import look_at_view_transform, FoVOrthographicCameras, PointsRasterizationSettings, PointsRenderer, PointsRasterizer, AlphaCompositor
 from tqdm import tqdm
 
-print("是否可用:", torch.cuda.is_available())        # 查看GPU是否可用
-print("GPU数量:", torch.cuda.device_count())        # 查看GPU数量
-print("torch方法查看CUDA版本:", torch.version.cuda)  # torch方法查看CUDA版本
-print("GPU索引号:", torch.cuda.current_device())    # 查看GPU索引号
-print("GPU名称:", torch.cuda.get_device_name(1))    # 根据索引号得到GPU名称
 
 def normalize_verts(verts):
     centroid = np.mean(verts, axis=0)
@@ -40,23 +35,15 @@ def load_ply(filepath):
     return pointcloud
 
 # Define the directories (modify these paths as needed)
-data_dir = '/home/old/zhangyujie/database/M-PCCD/distortion/'
+data_dir = '/home/zhangyujie/database/M-PCCD/distortion/'
 output_texture_dir = './database/M-PCCD/proj_6view_512_texture/'
 output_depth_dir = './database/M-PCCD/proj_6view_512_depth/'
 output_mask_dir = './database/M-PCCD/proj_6view_512_mask/'
 
-# data_dir = '/home/old/zhangyujie/database/BASICS/PointClouds/PointClouds/PPC_trans/'
-# output_texture_dir = '/home/old/zhangyujie/database/BASICS/proj_6view_1angle_512/'
-# output_depth_dir = '/home/old/zhangyujie/database/BASICS/proj_6view_1angle_512_depth/'
-# output_mask_dir = '/home/old/zhangyujie/database/BASICS/proj_6view_1angle_512_mask/'
-
-
-# Create directories if they don't exist
 os.makedirs(output_texture_dir, exist_ok=True)
 os.makedirs(output_depth_dir, exist_ok=True)
 os.makedirs(output_mask_dir, exist_ok=True)
 
-# Device to run the computation on
 device = torch.device("cuda:0")
 
 # Views to render

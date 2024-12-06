@@ -61,7 +61,7 @@ AFQ-Net uses pre-trained vision transformer (ViT) as the backbone and we provide
 
 `--k_fold_num 5 \`
 
-`\> logs/log_WPC.txt 2>&1 &`
+`> logs/log_WPC.txt 2>&1 &`
 
 You only need to replace the path of 'data_dir_texture', 'data_dir_depth' and 'data_dir_mask' with the path of projections on your computer. If you want to use the databases adopted in the paper, you can unzip the provided .zip file in the  ```database``` folder.
 

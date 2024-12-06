@@ -93,11 +93,11 @@ for i, ply_file in tqdm(enumerate(ply_files), total=len(ply_files), smoothing=0.
         depth_savename = os.path.join(output_depth_dir, f"{ply_file.split('.')[0]}_view_{k}.png")
         depth_image.save(depth_savename)
 
-        # Render and save the image
+        # Create texture map
         texture = renderer(pointcloud)
         texture_data = texture[0, ..., :3].cpu().numpy()
         texture_data = (texture_data * 255).astype(np.uint8)
         texture_image = Image.fromarray(texture_data, mode="RGB")
-        img_savename = os.path.join(output_texture_dir, f"{ply_file.split('.')[0]}_view_{k}.png")
-        texture_image.save(img_savename)
+        texture_savename = os.path.join(output_texture_dir, f"{ply_file.split('.')[0]}_view_{k}.png")
+        texture_image.save(texture_savename)
 

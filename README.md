@@ -18,7 +18,7 @@ Recent years have witnessed the success of the deep learning-based technique in 
 * TorchVision
 * scipy
 
-## 💼 Get Projections
+## 📦 Data Preparation
 
 We use 2D projections of point clouds as the network input, including texture, depth and occupancy images. To convert point clouds into images, we  create a independent environment  that relies on Pytorch3D and Open3D, following the instruction in [link](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md). Then, we run the MyProjection.py in the  ```projection``` folder to get projections. *We provide the download links for the projections of the used databases including SJTU-PCQA, WPC, LS-PCQA, BASICS and M-PCCD, which can be accessed here  [Onedrive](https://1drv.ms/f/c/669676c02328fc1b/Eonj9bAnDT5NrXkHMzTKuDABIAz6VdX-dHi8JvfTMi_Tiw?e=mHKXZV)*.
 

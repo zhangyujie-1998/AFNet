@@ -36,7 +36,7 @@ If you want to create projections for new databases, you need to replace the pat
 
 `\````
 
-## 🚆 Begin Training
+## 🚆 Training
 
 AFQ-Net uses pre-trained vision transformer (ViT) as the backbone and we provide the pre-trained weight of ViT in  [Onedrive](https://1drv.ms/f/c/669676c02328fc1b/Eonj9bAnDT5NrXkHMzTKuDABIAz6VdX-dHi8JvfTMi_Tiw?e=mHKXZV).  You need to put the pre-trained weights in the ```checkpoint``` folder. Then, you can simply train the AFQ-Net by referring to train.sh. For example, you can train AFQ-Net on the WPC database with the following command:
 

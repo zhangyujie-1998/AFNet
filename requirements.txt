@@ -1,0 +1,10 @@
+pandas==2.2.3
+numpy==1.23.5
+scipy==1.14.1
+tqdm==4.67.1
+ftfy==6.3.1
+open3d==0.18.0
+regex
+thop
+imageio
+openpyxl

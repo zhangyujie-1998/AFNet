@@ -16,8 +16,8 @@ Recent years have witnessed the success of the deep learning-based technique in 
 Please use the following commands to install dependencies:
 
 ```
-conda create --name HyperScore python=3.10
-conda activate HyperScore 
+conda create --name AFQNet python=3.10
+conda activate AFQNet 
 conda install pytorch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 pytorch-cuda=11.6 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```

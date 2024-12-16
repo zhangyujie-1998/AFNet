@@ -201,14 +201,15 @@ def main(args):
                 print('%-3d\t%-8.3f\t%-8.4f\t%-8.4f\t%-8.4f\t%-8.4f' %
                     (epoch + 1, avg_loss, train_SROCC, test_SROCC, test_PLCC, train_time))
                 
-                results_df = results_df.append({
+                new_row = pd.DataFrame([{
                     'Epoch': epoch + 1,
                     'Train_Loss': avg_loss,
                     'Train_SRCC': train_SROCC,
                     'Test_SRCC': test_SROCC,
                     'Test_PLCC': test_PLCC,
                     'Training_time(s)': train_time
-                }, ignore_index=True)
+                  }])
+                results_df = pd.concat([results_df, new_row], ignore_index=True)
 
                 if avg_loss < min_training_loss:
                     # print("Update best model using best_val_criterion ")

@@ -35,7 +35,7 @@ def load_ply(filepath):
     return pointcloud
 
 # Define the directories (modify these paths as needed)
-data_dir = '/home/zhangyujie/database/M-PCCD/distortion/'
+data_dir = './database/M-PCCD/distortion/'
 output_texture_dir = './database/M-PCCD/proj_6view_512_texture/'
 output_depth_dir = './database/M-PCCD/proj_6view_512_depth/'
 output_mask_dir = './database/M-PCCD/proj_6view_512_mask/'

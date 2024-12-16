@@ -31,7 +31,7 @@ conda install pytorch3d -c pytorch3d
 
 ## 📦 Data Preparation
 
-We use 2D projections of point clouds as the network input, including texture, depth and occupancy images. Then, you need to run MyProjection.py in the  ```projection``` folder to get projections. *We provide the download links for the projections of the used databases including SJTU-PCQA, WPC, LS-PCQA, BASICS and M-PCCD, which can be accessed here  [Onedrive](https://1drv.ms/f/c/669676c02328fc1b/Eonj9bAnDT5NrXkHMzTKuDABIAz6VdX-dHi8JvfTMi_Tiw?e=mHKXZV)*.
+We use 2D projections of point clouds as the network input, including texture, depth and occupancy images. You need to run MyProjection.py in the  ```projection``` folder to get projections. *We provide the download links for the projections of the used databases including SJTU-PCQA, WPC, LS-PCQA, BASICS and M-PCCD, which can be accessed here  [Onedrive](https://1drv.ms/f/c/669676c02328fc1b/Eonj9bAnDT5NrXkHMzTKuDABIAz6VdX-dHi8JvfTMi_Tiw?e=mHKXZV)*.
 
 If you want to create projections for new databases, you need to replace the path of  'data_dir' in the MyProjection.py with the path of data on your computer. The file structure of used data should be like:
 

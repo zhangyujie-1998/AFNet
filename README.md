@@ -22,7 +22,7 @@ conda install pytorch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 pytorch-cud
 pip install -r requirements.txt
 ```
 
-Additionally, we render texture meshed into images by Pytorch3D, please follow the steps to install Pytorch3D.
+Additionally, we need to render point clouds into images by Pytorch3D, please follow the steps to install Pytorch3D.
 
 ```
 conda install -c bottler nvidiacub

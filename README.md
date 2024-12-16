@@ -13,14 +13,25 @@ Recent years have witnessed the success of the deep learning-based technique in 
 
 ## 🔧 Dependencies
 
-* Python 3.7.16
-* PyTorch 1.8.0
-* TorchVision
-* scipy
+Please use the following commands to install dependencies:
+
+```
+conda create --name HyperScore python=3.10
+conda activate HyperScore 
+conda install pytorch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 pytorch-cuda=11.6 -c pytorch -c nvidia
+pip install -r requirements.txt
+```
+
+Additionally, we render texture meshed into images by Pytorch3D, please follow the steps to install Pytorch3D.
+
+```
+conda install -c bottler nvidiacub
+conda install pytorch3d -c pytorch3d
+```
 
 ## 📦 Data Preparation
 
-We use 2D projections of point clouds as the network input, including texture, depth and occupancy images. To convert point clouds into images, we  create a independent environment  that relies on Pytorch3D and Open3D, following the instruction in [link](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md). Then, we run the MyProjection.py in the  ```projection``` folder to get projections. *We provide the download links for the projections of the used databases including SJTU-PCQA, WPC, LS-PCQA, BASICS and M-PCCD, which can be accessed here  [Onedrive](https://1drv.ms/f/c/669676c02328fc1b/Eonj9bAnDT5NrXkHMzTKuDABIAz6VdX-dHi8JvfTMi_Tiw?e=mHKXZV)*.
+We use 2D projections of point clouds as the network input, including texture, depth and occupancy images. Then, you need to run MyProjection.py in the  ```projection``` folder to get projections. *We provide the download links for the projections of the used databases including SJTU-PCQA, WPC, LS-PCQA, BASICS and M-PCCD, which can be accessed here  [Onedrive](https://1drv.ms/f/c/669676c02328fc1b/Eonj9bAnDT5NrXkHMzTKuDABIAz6VdX-dHi8JvfTMi_Tiw?e=mHKXZV)*.
 
 If you want to create projections for new databases, you need to replace the path of  'data_dir' in the MyProjection.py with the path of data on your computer. The file structure of used data should be like:
 
